@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="sq"><rect width="32" height="32" rx="7"/></clipPath>
+  </defs>
+  <g clip-path="url(#sq)">
+    <rect width="32" height="10.67" fill="#00A3E0"/>
+    <rect y="10.67" width="32" height="10.66" fill="#FFFFFF"/>
+    <rect y="21.33" width="32" height="10.67" fill="#00A650"/>
+    <g fill="#E6B30A" transform="translate(16 16.2)">
+      <g>
+        <path d="M0-1.6C1.15-4.2 1.7-7.1 0-10.2C-1.7-7.1-1.15-4.2 0-1.6Z"/>
+        <path d="M0-1.6C1.15-4.2 1.7-7.1 0-10.2C-1.7-7.1-1.15-4.2 0-1.6Z" transform="rotate(51.43)"/>
+        <path d="M0-1.6C1.15-4.2 1.7-7.1 0-10.2C-1.7-7.1-1.15-4.2 0-1.6Z" transform="rotate(102.86)"/>
+        <path d="M0-1.6C1.15-4.2 1.7-7.1 0-10.2C-1.7-7.1-1.15-4.2 0-1.6Z" transform="rotate(154.29)"/>
+        <path d="M0-1.6C1.15-4.2 1.7-7.1 0-10.2C-1.7-7.1-1.15-4.2 0-1.6Z" transform="rotate(205.71)"/>
+        <path d="M0-1.6C1.15-4.2 1.7-7.1 0-10.2C-1.7-7.1-1.15-4.2 0-1.6Z" transform="rotate(257.14)"/>
+        <path d="M0-1.6C1.15-4.2 1.7-7.1 0-10.2C-1.7-7.1-1.15-4.2 0-1.6Z" transform="rotate(308.57)"/>
+      </g>
+      <circle r="1.7" fill="#FFF6D0"/>
+      <circle r="0.85" fill="#E6B30A"/>
+    </g>
+  </g>
+</svg>

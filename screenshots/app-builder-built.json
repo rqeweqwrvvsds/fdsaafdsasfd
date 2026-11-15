@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Афиша Уфы",
+      "hasCanvas": false,
+      "bodyTextLen": 11034,
+      "bodyTextHash": "b8bc3e4e065d215c26da78240fab6224df6c3a1a8084acb6b655ca31a9fe0291",
+      "bodyTextPrefix": "Уфа Избранное Все события Концерты Спектакли Выставки Экскурсии ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Афиша Уфы",
+      "hasCanvas": false,
+      "bodyTextLen": 10955,
+      "bodyTextHash": "0b43bfe681f8a9f7a8a4a540b06a2ba8976612706e161b80d7334f4c9e9e5329",
+      "bodyTextPrefix": "Все события Концерты Спектакли Выставки Экскурсии Стендап Детям ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

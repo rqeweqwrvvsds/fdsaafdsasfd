@@ -1,0 +1,288 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("/fonts/Unbounded-400.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Unbounded";
+  src: url("/fonts/Unbounded-500.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Unbounded";
+  src: url("/fonts/Unbounded-700.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/Manrope-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/Manrope-Regular-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+2000-206F, U+20AC, U+2122;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/Manrope-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/Manrope-SemiBold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/Manrope-SemiBold-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+2000-206F, U+20AC, U+2122;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/Manrope-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/Manrope-ExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Manrope", "Segoe UI", sans-serif;
+  --font-display: "Unbounded", "Manrope", sans-serif;
+  /* Флаг Башкортостана: лазурь #00A3E0, белый, зелень #00A650, золото курая. */
+  --color-bg: #ffffff;
+  --color-fg: #102a38;
+  --color-muted: #3d6272;
+  --color-faint: #6c8a99;
+  --color-line: #d5e5ef;
+  --color-soft: #f1f7fb;
+  --color-chip: #e5f1f8;
+  --color-accent: #0077a8;
+  --color-accent-fg: #ffffff;
+  --color-ink: #063048;
+  --color-grove: #007a3d;
+  --color-gold: #c8960a;
+  --color-sky: #00a3e0;
+  --color-leaf: #00a650;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    min-height: 100%;
+    font-weight: 400;
+  }
+  h1, h2 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+  }
+  h3 {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled),
+  summary {
+    cursor: pointer;
+  }
+}
+
+.press {
+  transition: scale 150ms ease-out;
+}
+.press:active:not(:disabled) {
+  scale: 0.96;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+.page-enter {
+  animation: page-enter 480ms cubic-bezier(0.2, 0, 0, 1) both;
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.event-card {
+  animation: card-in 420ms cubic-bezier(0.2, 0, 0, 1) both;
+}
+.event-cover {
+  transition: transform 520ms cubic-bezier(0.2, 0, 0, 1);
+}
+.event-card:hover .event-cover {
+  transform: scale(1.045);
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.search-pop {
+  animation: pop-in 180ms cubic-bezier(0.2, 0, 0, 1) both;
+}
+
+.hero-card {
+  transition: transform 220ms ease-out, box-shadow 220ms ease-out;
+}
+.hero-card:hover {
+  transform: translateY(-3px);
+}
+@keyframes drift {
+  from { transform: scale(1); }
+  to { transform: scale(1.06); }
+}
+.hero-media {
+  animation: drift 18s ease-in-out infinite alternate;
+}
+
+.ticket-panel {
+  animation: page-enter 420ms cubic-bezier(0.2, 0, 0, 1) both;
+}
+
+@keyframes chat-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.chat-pop {
+  animation: chat-in 240ms cubic-bezier(0.2, 0, 0, 1) both;
+}
+
+.flag-bar {
+  height: 6px;
+  background: linear-gradient(
+    to bottom,
+    #00a3e0 0 33.34%,
+    #ffffff 33.34% 66.67%,
+    #00a650 66.67% 100%
+  );
+}
+
+.logo-slot {
+  max-width: 9.5rem;
+  opacity: 1;
+  transform: translateX(0);
+  transition:
+    max-width 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 240ms ease,
+    transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (min-width: 640px) {
+  .logo-slot {
+    max-width: 15rem;
+  }
+}
+.logo-slot-closed {
+  max-width: 0;
+  opacity: 0;
+  transform: translateX(-8px);
+  pointer-events: none;
+}
+.search-field {
+  transition:
+    padding 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 420ms ease;
+}
+.search-field-open {
+  background: var(--color-bg);
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  box-shadow:
+    0 18px 44px -22px rgba(6, 48, 72, 0.45),
+    0 0 0 1px var(--color-line);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@layer utilities {
+  .font-display { font-family: var(--font-display); }
+}
