@@ -1,0 +1,3 @@
+{
+  "_help": "Своя картинка события: положите файл в public/covers/custom/ и добавьте строку. Ключ — id из src/data/events.json (или из адреса /events/id). Значение — путь, например /covers/custom/9-gramm.jpg. Ключи с _ игнорируются."
+}

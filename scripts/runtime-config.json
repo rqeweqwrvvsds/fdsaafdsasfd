@@ -1,0 +1,6 @@
+{
+  "telegramToken": "",
+  "llmBaseUrl": "",
+  "llmApiKey": "",
+  "llmModel": "gpt-4o-mini"
+}
